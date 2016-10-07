@@ -10,7 +10,7 @@ namespace MyGame
 		private int _x;
 		private int _y;
 		private int _size;
-		private Images _sprite;
+        private Bitmap _sprite;
 
 		public Entity ()
 		{
@@ -39,7 +39,7 @@ namespace MyGame
 			}
 		}
 
-		public Images Sprite
+        public Bitmap Sprite
 		{
 			get{
 				return _sprite;
