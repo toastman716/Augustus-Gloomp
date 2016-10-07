@@ -62,6 +62,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\GameMain.cs" />
+    <Compile Include="src\Entity.cs" />
+    <Compile Include="src\Player.cs" />
+    <Compile Include="src\Enemy.cs" />
+    <Compile Include="src\EnemyStraight.cs" />
+    <Compile Include="src\EnemyFollow.cs" />
+    <Compile Include="src\EnemySin.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SwinGame">
