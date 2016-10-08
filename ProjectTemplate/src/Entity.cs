@@ -10,7 +10,7 @@ namespace MyGame
 		private int _x;
 		private int _y;
 		private int _size;
-		private Images _sprite;
+		private Image _sprite;
 
 		public Entity ()
 		{
