@@ -18,5 +18,24 @@ namespace MyGame
 			//SwinGame.FillCircle(Color.Blue, X, Y, Size/2);
 		}
 
+        public override void Move ()
+        {
+            if (SwinGame.KeyDown (KeyCode.vk_DOWN) && Y < (SwinGame.ScreenHeight () - Size)) {
+                Y += Y;
+            }
+
+            if (SwinGame.KeyDown (KeyCode.vk_UP) && Y > Size + 0) {
+                Y -= Y;
+            }
+
+            if (SwinGame.KeyDown (KeyCode.vk_RIGHT) && Y < (SwinGame.ScreenWidth () - Size)) {
+                X += X;
+            }
+
+            if (SwinGame.KeyDown (KeyCode.vk_LEFT) && Y > Size + 0) {
+                X -= X;
+            }
+        }
+
 	}
 }
