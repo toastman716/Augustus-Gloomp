@@ -24,6 +24,20 @@ namespace MyGame
                 //Draw onto the screen
                 SwinGame.RefreshScreen(60);
             }
+
+
         }
+
+		public static void Pause()
+		{
+			while(false == SwinGame.WindowCloseRequested())
+			{
+				//Fetch the next batch of UI interaction
+				SwinGame.ProcessEvents();
+				if (SwinGame.KeyTyped (KeyCode.vk_SPACE))
+					break;
+
+			}
+		}
     }
 }
