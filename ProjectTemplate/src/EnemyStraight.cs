@@ -7,12 +7,12 @@ namespace MyGame
 	{
 		public EnemyStraight ()
 		{
-			Sprite = "Chocolate.bmp";
+			Sprite = SwinGame.LoadBitmapNamed ("sprite","Goat.bmp");
 		}
 
 		public override void Draw() 
 		{
-			SwinGame.DrawBitmap (Sprite, X, Y);
+			SwinGame.DrawBitmap ("sprite", X, Y);
 			//SwinGame.FillRectangle(Color.Red, X, Y, Size, Size);
 		}
 

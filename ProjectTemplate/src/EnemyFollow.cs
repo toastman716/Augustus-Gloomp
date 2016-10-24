@@ -9,12 +9,12 @@ namespace MyGame
 		private float _hyp;
 		public EnemyFollow ()
 		{
-			Sprite = "Apple.bmp";
+			Sprite = SwinGame.LoadBitmapNamed ("sprite","Pig.bmp");
 		}
 
 		public override void Draw() 
 		{
-			SwinGame.DrawBitmap (Sprite, X, Y);
+			SwinGame.DrawBitmap ("sprite", X, Y);
 			//SwinGame.FillRectangle(Color.Gold, X, Y, Size, Size);
 
 		}

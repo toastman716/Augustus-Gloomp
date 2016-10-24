@@ -9,24 +9,37 @@ namespace MyGame
         {
             //Open the game window
             SwinGame.OpenGraphicsWindow("GameMain", 800, 600);
-            SwinGame.ShowSwinGameSplashScreen();
-            
+			Game game = new Game ();
+			game.Player.X = (50);
+			game.Player.Y = (50);
             //Run the game loop
             while(false == SwinGame.WindowCloseRequested())
             {
+				SwinGame.ClearScreen(Color.White);
+				SwinGame.DrawFramerate(0,0);
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
-                
+				game.DrawGame ();
+				int x = 0;
                 //Clear the screen and draw the framerate
-                SwinGame.ClearScreen(Color.White);
-                SwinGame.DrawFramerate(0,0);
+
                 
                 //Draw onto the screen
                 SwinGame.RefreshScreen(60);
+				x++;
+				if (x == 20)
+				{
+					x = 0;
+					game.Spawn ();
+				}
+
+				if (SwinGame.KeyTyped (KeyCode.vk_SPACE))
+					Pause ();
             }
 
 
         }
+
 
 		public static void Pause()
 		{
