@@ -5,7 +5,12 @@ namespace MyGame
 {
 	public class Game
 	{
+        
+        private int _tempScore = 0;
 		private Player _player;
+        private Bitmap _playerSprite;
+        private Bitmap _enemySprite;
+        private int _score;
 		private List<Enemy> _enemies = new List<Enemy>(); 
 		public bool gameover = false;
 		public Game ()
@@ -34,6 +39,7 @@ namespace MyGame
 					e.Close = false;
 
 				e.Move ();
+                SwinGame.DrawText ("Score: " + _score, Color.Black, 200, 0);
 
 			}
 
@@ -61,6 +67,48 @@ namespace MyGame
 			}
 
 		}
+
+        //collision detection for enemies and players
+        public void Collision ()
+        {
+
+            Point2D playerpt = SwinGame.PointAt (Player.X, Player.Y);
+            _playerSprite = new Bitmap ("sprite");
+            _enemySprite = new Bitmap ("sprite");
+
+
+
+            List<Enemy> toRemove = new List<Enemy> ();
+            foreach (Enemy e in _enemies) {
+                Point2D enemypt = SwinGame.PointAt (e.X, e.Y);
+
+
+                if (SwinGame.BitmapCollision (_playerSprite, playerpt, _enemySprite, enemypt) == true) {
+                    if (_player.Size < e.Size) {
+                        gameover = true;
+                    } else if ((e.X < 3) || (e.X > (SwinGame.ScreenWidth () - 3))) {
+                        _tempScore += 1;
+                        _player.Size += e.Size;
+                        toRemove.Add (e);
+                    }
+
+                }
+            }
+                foreach (Enemy e in toRemove) {
+                    _enemies.Remove (e);
+                }
+
+                _score = _tempScore;
+
+
+        }
+
+        public int Score {
+            get {
+                return _score;
+            }
+        }
+
 			
 
 		public Player Player
