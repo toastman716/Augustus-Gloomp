@@ -1,5 +1,6 @@
-﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default" StartupItem="MyGame.csproj">
+﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
+  <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
@@ -17,5 +18,4 @@
       <File FileName="src\UnitTests.cs" Line="42" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

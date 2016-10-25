@@ -29,11 +29,11 @@ namespace MyGame
                 Y -= 1;
             }
 
-            if (SwinGame.KeyDown (KeyCode.vk_RIGHT) && Y < (SwinGame.ScreenWidth () - Size)) {
+			if (SwinGame.KeyDown (KeyCode.vk_RIGHT) && X < (SwinGame.ScreenWidth() - Size)) {
                 X += 1;
             }
 
-            if (SwinGame.KeyDown (KeyCode.vk_LEFT) && Y > Size + 0) {
+            if (SwinGame.KeyDown (KeyCode.vk_LEFT) && X > Size + 0 ) {
                 X -= 1;
             }
         }

@@ -25,15 +25,15 @@ namespace MyGame
 
 				e.Draw ();
 				//handle the follow enemy requirements
-//				if ((e is EnemyFollow) && (SwinGame.PointPointDistance (SwinGame.PointAt (_player.X, _player.Y), SwinGame.PointAt (e.X, e.Y)) < 80))
-//				{
-//
-//					e.SetPlayer (_player);
-//					e.Close = true;
-//
-//				}
-//				else
-//					e.Close = false;
+				if ((e is EnemyFollow) && (SwinGame.PointPointDistance (SwinGame.PointAt (_player.X, _player.Y), SwinGame.PointAt (e.X, e.Y)) < 80))
+				{
+
+					e.SetPlayer (_player);
+					e.Close = true;
+
+				}
+				else
+					e.Close = false;
                 
 				e.Move ();
 
