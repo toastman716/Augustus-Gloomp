@@ -8,13 +8,13 @@ namespace MyGame
 
 		public EnemySin ()
 		{
-			Sprite = SwinGame.LoadBitmapNamed ("sprite","Sheep.bmp");
+			Sprite = SwinGame.LoadBitmapNamed ("sprite3","Sheep.png");
 		}
 
 
 		public override void Draw() 
 		{
-			SwinGame.DrawBitmap ("sprite", X, Y);
+			SwinGame.DrawBitmap ("sprite3", X, Y);
 			//SwinGame.FillCircle(Color.BlueViolet, X, Y, Size/2);
 		}
 

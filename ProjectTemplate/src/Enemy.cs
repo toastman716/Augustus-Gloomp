@@ -13,7 +13,7 @@ namespace MyGame
 		public Enemy ()
 		{
 			Random rnd = new Random ();
-			int randSize = rnd.Next (1, 80);
+			int randSize = rnd.Next (1, 10);
 			int randX = rnd.Next (0, 100);
 			int randY = rnd.Next (0, 600);
 			int randSpeed = rnd.Next (1, 5);

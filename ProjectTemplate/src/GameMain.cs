@@ -12,6 +12,7 @@ namespace MyGame
 			Game game = new Game ();
 			game.Player.X = (50);
 			game.Player.Y = (50);
+			int x = 0;
             //Run the game loop
             while(false == SwinGame.WindowCloseRequested())
             {
@@ -20,7 +21,7 @@ namespace MyGame
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
 				game.DrawGame ();
-				int x = 0;
+
                 //Clear the screen and draw the framerate
 
                 

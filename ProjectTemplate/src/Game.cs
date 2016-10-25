@@ -25,15 +25,15 @@ namespace MyGame
 
 				e.Draw ();
 				//handle the follow enemy requirements
-				if ((e is EnemyFollow) && (SwinGame.PointPointDistance (SwinGame.PointAt (_player.X, _player.Y), SwinGame.PointAt (e.X, e.Y)) < 80))
-				{
-
-					e.SetPlayer (_player);
-					e.Close = true;
-
-				}
-				else
-					e.Close = false;
+//				if ((e is EnemyFollow) && (SwinGame.PointPointDistance (SwinGame.PointAt (_player.X, _player.Y), SwinGame.PointAt (e.X, e.Y)) < 80))
+//				{
+//
+//					e.SetPlayer (_player);
+//					e.Close = true;
+//
+//				}
+//				else
+//					e.Close = false;
                 
 				e.Move ();
 
@@ -43,6 +43,7 @@ namespace MyGame
 		//spawn new enemies 
 		public void Spawn()
 		{
+			
 			Random random = new Random ();
 			int randtype = random.Next (1,16);
 
@@ -79,7 +80,7 @@ namespace MyGame
                 Point2D enemypt = SwinGame.PointAt (e.X, e.Y);
 
 
-                if (SwinGame.BitmapCollision(_player.Sprite,playerpt,e.Sprite,enemypt) == true) {
+               if (SwinGame.BitmapCollision(_player.Sprite,playerpt,e.Sprite,enemypt)) {
                     if (Player.Size < e.Size) {
                         gameover = true;
                     } else {
@@ -87,7 +88,7 @@ namespace MyGame
                         _tempScore += e.Size;
                         toRemove.Add (e);
                     }
-                    if ((e.X < 3) || (3 - SwinGame.ScreenWidth () < e.X)) {
+                    if ((e.X < -20) || (820  < e.X)) {
                         toRemove.Add (e);
                     }
                 }

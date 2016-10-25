@@ -55,3 +55,4 @@ C:\Users\carldsf\Dropbox\dev project\Augustus-Gloomp\ProjectTemplate\bin\Debug\n
 C:\Users\carldsf\Dropbox\dev project\Augustus-Gloomp\ProjectTemplate\bin\Debug\normnfkd.nlp
 C:\Users\carldsf\Dropbox\dev project\Augustus-Gloomp\ProjectTemplate\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache
 C:\Users\carldsf\Dropbox\dev project\Augustus-Gloomp\ProjectTemplate\obj\x86\Debug-Windows\MyGame.exe
+C:\Users\Harry\Documents\School\SOFTWARE_DEV\Augustus-Gloomp\ProjectTemplate\obj\x86\Debug-Windows\MyGame.csprojResolveAssemblyReference.cache

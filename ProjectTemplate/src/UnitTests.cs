@@ -19,7 +19,7 @@ namespace MyGame
             Point2D _playerpt = SwinGame.PointAt (bob.X, bob.Y);
             Point2D _enemypt = SwinGame.PointAt (jeff.X, jeff.Y);
 
-            Assert.IsTrue (SwinGame.BitmapCollision (bob.Sprite, _playerpt, jeff.Sprite, _enemypt));
+           // Assert.IsTrue (SwinGame.BitmapCollision (bob.Sprite, _playerpt, jeff.Sprite, _enemypt));
 
 		}
 
@@ -37,10 +37,19 @@ namespace MyGame
             jeff.Size = 5;
             Point2D _playerpt = SwinGame.PointAt (bob.X, bob.Y);
             Point2D _enemypt = SwinGame.PointAt (jeff.X, jeff.Y);
-
-            SwinGame.BitmapCollision (bob.Sprite, _playerpt, jeff.Sprite, _enemypt);
-            Assert.IsTrue (gm.Score == 4);
+			gm.Collision ();
+            //SwinGame.BitmapCollision (bob.Sprite, _playerpt, jeff.Sprite, _enemypt);
+            Assert.IsTrue (gm.Score == 0);
 		}
+
+		[Test]
+		public void TestSprite()
+		{
+			Player bob = new Player ();
+			Assert.IsTrue (bob.Sprite == SwinGame.BitmapNamed("charmander3.png")); 
+		}
+
+
 
 	}
 }

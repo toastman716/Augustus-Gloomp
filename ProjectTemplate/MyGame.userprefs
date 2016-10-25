@@ -1,21 +1,21 @@
-﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default">
+﻿<Properties StartupConfiguration="{871B5A90-103A-46A5-BBB9-07C02B9851D1}|Default" StartupItem="MyGame.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug-Windows|x86" />
-  <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="src\UnitTests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="src\Game.cs">
     <Files>
-      <File FileName="src\GameMain.cs" Line="19" Column="33" />
-      <File FileName="src\Game.cs" Line="68" Column="1" />
+      <File FileName="src\GameMain.cs" Line="15" Column="14" />
+      <File FileName="src\Game.cs" Line="83" Column="86" />
       <File FileName="src\Entity.cs" Line="13" Column="26" />
-      <File FileName="src\Player.cs" Line="12" Column="61" />
-      <File FileName="src\Enemy.cs" Line="35" Column="62" />
-      <File FileName="src\EnemyStraight.cs" Line="15" Column="33" />
-      <File FileName="src\EnemyFollow.cs" Line="12" Column="56" />
-      <File FileName="src\EnemySin.cs" Line="17" Column="33" />
-      <File FileName="src\UnitTests.cs" Line="30" Column="13" />
+      <File FileName="src\Player.cs" Line="12" Column="49" />
+      <File FileName="src\Enemy.cs" Line="16" Column="34" />
+      <File FileName="src\EnemyStraight.cs" Line="10" Column="58" />
+      <File FileName="src\EnemyFollow.cs" Line="17" Column="4" />
+      <File FileName="src\EnemySin.cs" Line="11" Column="59" />
+      <File FileName="src\UnitTests.cs" Line="42" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.MyGame PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
