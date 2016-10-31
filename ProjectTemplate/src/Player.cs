@@ -15,8 +15,10 @@ namespace MyGame
 
 		public override void Draw() 
 		{
+            SwinGame.FillCircle (Color.Blue, (X + (SwinGame.BitmapWidth (Sprite) / 2)), (Y + (SwinGame.BitmapHeight (Sprite) / 2)), Size / 2);
+
 			SwinGame.DrawBitmap ("sprite", X, Y);
-			//SwinGame.FillCircle(Color.Blue, X, Y, Size/2);
+			
 		}
 
         public void Move ()
