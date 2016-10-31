@@ -57,32 +57,43 @@ namespace MyGame
 				EnemySin esin = new EnemySin ();
 				_enemies.Add (esin);
 			}
-			else 
-			{
-				EnemyFollow ef = new EnemyFollow ();
-				_enemies.Add (ef);
-			}
+			//else 
+			//{
+			//	EnemyFollow ef = new EnemyFollow ();
+			//	_enemies.Add (ef);
+			//}
 
 		}
 
         private int _tempScore = 0;
         private int _score;
+        private Circle _shadowplayer;
+        private Circle _shadowenemy;
 
         //collision detection for enemies and players
         public void Collision ()
         {
 
-            Point2D playerpt = SwinGame.PointAt (Player.X, Player.Y);
+            Point2D playerpt = SwinGame.PointAt (_player.X, _player.Y);
+            _shadowplayer.Center = playerpt;
+            _shadowplayer.Radius = _player.Size;
+
 
 
             List<Enemy> toRemove = new List<Enemy> ();
             foreach (Enemy e in _enemies) {
                 Point2D enemypt = SwinGame.PointAt (e.X, e.Y);
+                _shadowenemy.Center = enemypt;
+                _shadowenemy.Radius = e.Size;
 
 
-               if (SwinGame.BitmapCollision(_player.Sprite,playerpt,e.Sprite,enemypt)) {
+
+                //if (SwinGame.BitmapCollision(_player.Sprite,_player.X,_player.Y,e.Sprite,e.X,e.Y) == true) {
+                if (SwinGame.CircleCircleCollision (_shadowplayer, _shadowenemy) == true) {
                     if (Player.Size < e.Size) {
                         gameover = true;
+                       
+
                     } else {
                         Player.Size += e.Size;
                         _tempScore += e.Size;

@@ -14,8 +14,9 @@ namespace MyGame
 
 		public override void Draw() 
 		{
-			SwinGame.DrawBitmap ("sprite2", X, Y);
-			//SwinGame.FillRectangle(Color.Gold, X, Y, Size, Size);
+            SwinGame.FillCircle (Color.Blue, (X + (SwinGame.BitmapWidth (Sprite) / 2)), (Y + (SwinGame.BitmapHeight (Sprite) / 2)), Size / 2);
+            SwinGame.DrawBitmap ("sprite2", X, Y);
+		
 
 		}
 
