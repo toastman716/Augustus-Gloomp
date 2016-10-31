@@ -1,0 +1,12 @@
+language: csharp
+solution: MyGame.sln
+sudo: true
+install:
+  - sudo apt-get install -y gtk-sharp2
+  
+  - nuget restore MyGame.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script:
+  - xbuild /p:Configuration=Release MyGame.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./ProjectTemplate/bin/Debug/nunit.framework.dll
+  \n
