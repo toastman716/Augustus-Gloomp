@@ -7,12 +7,21 @@ namespace MyGame
 	{
 		private Player _player;
 		private List<Enemy> _enemies = new List<Enemy>(); 
-		public bool gameover = false;
+		public int gameover = 0;
 		public Game ()
 		{
 			_player = new Player();
 
 		}
+        public void GameOver ()
+        {
+            if (gameover == 1) {
+                SwinGame.ClearScreen (Color.White);
+                SwinGame.DrawText ("You lost, unlucky m8 game over! press space to restart", Color.Black, 200, 300);
+
+            }
+        }
+    
 
 		//draw the game interface
 		public void DrawGame()
@@ -88,16 +97,16 @@ namespace MyGame
 
 
 
-                //if (SwinGame.BitmapCollision(_player.Sprite,_player.X,_player.Y,e.Sprite,e.X,e.Y) == true) {
-                if (SwinGame.CircleCircleCollision (_shadowplayer, _shadowenemy) == true) {
-                    if (Player.Size < e.Size) {
-                        gameover = true;
-                       
+                if (SwinGame.BitmapCollision(_player.Sprite,_player.X,_player.Y,e.Sprite,e.X,e.Y) == true) {
+                    //if (SwinGame.CircleCircleCollision (_shadowplayer, _shadowenemy) == true) {
+                    if (_player.Size > e.Size) {
 
-                    } else {
-                        Player.Size += e.Size;
+                        _player.Size += e.Size;
                         _tempScore += e.Size;
                         toRemove.Add (e);
+
+                    } else if (e.Size > _player.Size)  {
+                        gameover = 1;
                     }
                     if ((e.X < -20) || (820  < e.X)) {
                         toRemove.Add (e);
